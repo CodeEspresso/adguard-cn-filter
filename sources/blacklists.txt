@@ -1,0 +1,4 @@
+https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-easylist.txt | Anti-AD 综合广告规则
+https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt | AdGuard DNS Filter（广告+隐私）
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/pro.txt | Hagezi 专业过滤（恶意/追踪/广告）
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/fake.txt | Hagezi 假站点过滤

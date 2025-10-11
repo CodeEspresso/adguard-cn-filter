@@ -1,0 +1,2 @@
+https://raw.githubusercontent.com/fakDNS/fakDNS/main/allowlist.txt | 国内常见 CDN / 应用白名单
+https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-white.txt | Anti-AD 官方白名单
