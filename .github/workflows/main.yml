@@ -1,0 +1,36 @@
+name: Build AdGuard CN Complete Filter
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 16 * * *"  # 每天 UTC 16 点（北京时间 0 点）自动运行
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true  # 使用 GITHUB_TOKEN
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Build filter
+        run: python scripts/build.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add output/adguard-cn-complete.txt
+          git commit -m "Auto update filter" || echo "No changes to commit"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
