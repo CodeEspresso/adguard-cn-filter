@@ -1,5 +1,5 @@
 # AdGuard CN Complete Filter
-# Last update: 2025-10-27T16:21:34.330043
+# Last update: 2025-10-27T16:32:07.431285
 # Total domains: 522206
 # Source: https://github.com/CodeEspresso/adguard-cn-filter
 
